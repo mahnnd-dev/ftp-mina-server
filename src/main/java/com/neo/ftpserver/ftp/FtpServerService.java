@@ -1,10 +1,11 @@
 package com.neo.ftpserver.ftp;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ftpserver.FtpServer;
 import org.apache.ftpserver.FtpServerFactory;
-import org.apache.ftpserver.ftplet.FtpException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -12,41 +13,35 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class FtpServerService {
-    private final FtpServerFactory ftpServerFactory;
     private FtpServer ftpServer;
-    @Value("${ftp.server.port:2121}")
+    private final FtpServerFactory serverFactory;
+    @Value("${ftp.server.ftp-port:2121}")
     private int ftpPort;
+    @Value("${ftp.server.ftps-port:990}")
+    private int ftpsPort;
 
-    public synchronized void start() throws Exception {
+
+    @PostConstruct
+    public void initFtpServer() {
         try {
-            if (ftpServer == null || ftpServer.isStopped()) {
-                ftpServer = ftpServerFactory.createServer();
-                ftpServer.start();
-                log.info("#FTP Server started successfully on port " + ftpPort);
-            }
-        } catch (FtpException e) {
-            log.error("Failed to start FTP Server", e);
-            throw new RuntimeException("Failed to start FTP Server: " + e.getMessage(), e);
+            log.info("🔧 Initializing FTP/FTPS server on port {}/{}", ftpPort,ftpsPort);
+            ftpServer = serverFactory.createServer();
+            ftpServer.start();
+            log.info("✅ FTP/FTPS server started successfully on port {}/{}", ftpPort,ftpsPort);
+        } catch (Exception e) {
+            log.error("❌ Failed to start FTP/FTPS server", e);
         }
-
     }
 
-    public synchronized void stop() {
-        if (ftpServer != null && !ftpServer.isStopped()) {
-            try {
+    @PreDestroy
+    public void stopFtpServer() {
+        try {
+            if (ftpServer != null && !ftpServer.isStopped()) {
                 ftpServer.stop();
-                log.info("#FTP Server stopped successfully");
-            } catch (Exception e) {
-                log.error("Error stopping FTP Server", e);
+                log.info("🛑 FTP/FTPS server stopped successfully");
             }
+        } catch (Exception e) {
+            log.error("⚠️ Error while stopping FTP/FTPS server", e);
         }
-    }
-
-    public boolean isRunning() {
-        return ftpServer != null && !ftpServer.isStopped();
-    }
-
-    public boolean isSuspended() {
-        return ftpServer != null && ftpServer.isSuspended();
     }
 }

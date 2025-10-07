@@ -1,41 +1,37 @@
 package com.neo.ftpserver.cache;
 
-import com.neo.ftpserver.entity.AccountFtp;
-import com.neo.ftpserver.repository.AccountFtpRepository;
+import com.neo.ftpserver.dto.AccountFtp;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.Cache;
-import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.ConcurrentHashMap;
 
-@Slf4j
 @Component
 @RequiredArgsConstructor
-public class AccountFtpCache {
+public class AccountFtpCache extends CacheSwapService<AccountFtp> {
+    private final JdbcTemplate jdbcTemplate;
 
-    private final AccountFtpRepository repository;
-    private final CacheManager cacheManager;
-
-    @Cacheable("accountFtp")
-    public AccountFtp getAccountFtpByAccount(String account) {
-        return repository.findByAccount(account).orElse(null);
+    @Override
+    protected ConcurrentHashMap<String, AccountFtp> fetchDataFromDB() {
+        ConcurrentHashMap<String, AccountFtp> map = new ConcurrentHashMap<>();
+        List<AccountFtp> partnerConfigList = findAll();
+        for (AccountFtp partnerConfig : partnerConfigList) {
+            map.put(partnerConfig.getAccount(), partnerConfig);
+        }
+        return map;
     }
 
-    @Scheduled(fixedRate = 10000)
-    public void refreshAccountFtpCache() {
-        List<AccountFtp> accountFtps = repository.findAll();
-        Cache cache = cacheManager.getCache("accountFtp");
-        for (AccountFtp ftp : accountFtps) {
-            cache.put(ftp.getAccount(), ftp);
-        }
-        String formattedDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
-        log.info("Đã cập nhật cache AccountFtp lúc {}, Cache size: {}", formattedDate, ((ConcurrentMap<?, ?>) cache.getNativeCache()).size());
+    @Scheduled(fixedDelayString = "10000")
+    public void forceRefresh() {
+        super.forceRefresh();
+    }
+
+    public List<AccountFtp> findAll() {
+        String sql = "SELECT * FROM ACCOUNT_FTP";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(AccountFtp.class));
     }
 }

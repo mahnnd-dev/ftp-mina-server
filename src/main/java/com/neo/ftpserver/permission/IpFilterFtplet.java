@@ -2,6 +2,7 @@ package com.neo.ftpserver.permission;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ftpserver.ftplet.*;
+import org.apache.ftpserver.impl.FtpIoSession;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -19,7 +20,10 @@ public class IpFilterFtplet extends DefaultFtplet {
             if (authority instanceof IpRestrictionPermission ipPerm) {
                 if (!ipPerm.isIpAllowed(clientIp)) {
                     session.write(new DefaultFtpReply(530, "Connection not allowed from IP: " + clientIp));
-                    return FtpletResult.SKIP;
+                    if (session instanceof FtpIoSession ioSession) {
+                        ioSession.closeNow(); // 🔹 Đóng kết nối ngay lập tức
+                    }
+                    return FtpletResult.DISCONNECT;
                 }
             }
         }

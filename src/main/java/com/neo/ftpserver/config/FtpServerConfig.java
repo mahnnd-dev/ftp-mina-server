@@ -1,7 +1,9 @@
 package com.neo.ftpserver.config;
 
 import com.neo.ftpserver.ftp.CustomUserManager;
+import com.neo.ftpserver.permission.ConnectionTypeFtplet;
 import com.neo.ftpserver.permission.IpFilterFtplet;
+import lombok.RequiredArgsConstructor;
 import org.apache.ftpserver.DataConnectionConfigurationFactory;
 import org.apache.ftpserver.FtpServerFactory;
 import org.apache.ftpserver.ftplet.Ftplet;
@@ -16,10 +18,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+@RequiredArgsConstructor
 public class FtpServerConfig {
 
-    @Value("${ftp.server.port:2121}")
+    @Value("${ftp.server.ftp-port:2121}")
     private int ftpPort;
+    @Value("${ftp.server.ftps-port:990}")
+    private int ftpsPort;
 
     @Value("${ftp.server.passive-ports:30000-30100}")
     private String passivePorts;
@@ -34,39 +39,42 @@ public class FtpServerConfig {
     private String keystorePassword;
 
     private final IpFilterFtplet ipFilterFtplet;
+    private final ConnectionTypeFtplet connectionTypeFtplet;
 
     private final CustomUserManager userManager;
 
-    public FtpServerConfig(IpFilterFtplet ipFilterFtplet, CustomUserManager userManager) {
-        this.ipFilterFtplet = ipFilterFtplet;
-        this.userManager = userManager;
-    }
 
     @Bean
     public FtpServerFactory ftpServerFactory() {
         FtpServerFactory serverFactory = new FtpServerFactory();
         serverFactory.setUserManager(userManager);
-
-        ListenerFactory listenerFactory = new ListenerFactory();
-        listenerFactory.setPort(ftpPort);
-
+        // Listener 1: FTP thường
+        ListenerFactory ftpListenerFactory = new ListenerFactory();
+        ftpListenerFactory.setPort(ftpPort);
+        serverFactory.addListener("default", ftpListenerFactory.createListener());
+        // Listener 2: FTPS (explicit)
+        ListenerFactory ftpsListenerFactory = new ListenerFactory();
+        ftpsListenerFactory.setPort(ftpsPort);
         // SSL/TLS
-//        SslConfigurationFactory ssl = new SslConfigurationFactory();
-//        ssl.setKeystoreFile(new File(keystorePath));
-//        ssl.setKeystorePassword(keystorePassword);
+        SslConfigurationFactory ssl = new SslConfigurationFactory();
+        ssl.setKeystoreFile(new File(keystorePath));
+        ssl.setKeystorePassword(keystorePassword);
+        // Listener (explicit FTPS)
+        ftpsListenerFactory.setSslConfiguration(ssl.createSslConfiguration());
+        ftpsListenerFactory.setImplicitSsl(false);
+        serverFactory.addListener("ftps", ftpsListenerFactory.createListener());
         // Passive mode config
         DataConnectionConfigurationFactory dataConnFactory = new DataConnectionConfigurationFactory();
         dataConnFactory.setPassivePorts(passivePorts);
         if (!passiveExternalAddress.isEmpty()) {
             dataConnFactory.setPassiveExternalAddress(passiveExternalAddress);
         }
-
-        listenerFactory.setDataConnectionConfiguration(dataConnFactory.createDataConnectionConfiguration());
-        serverFactory.addListener("default", listenerFactory.createListener());
-
+//        listenerFactory.setDataConnectionConfiguration(dataConnFactory.createDataConnectionConfiguration());
+//        serverFactory.addListener("default", listenerFactory.createListener());
         // Permission ip
         Map<String, Ftplet> ftplets = new HashMap<>();
         ftplets.put("ipFilterFtplet", ipFilterFtplet);
+        ftplets.put("connectionTypeFtplet", connectionTypeFtplet);
         serverFactory.setFtplets(ftplets);
 
         return serverFactory;

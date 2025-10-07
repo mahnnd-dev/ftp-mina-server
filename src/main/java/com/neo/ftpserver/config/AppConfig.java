@@ -15,8 +15,4 @@ public class AppConfig {
         mapper.registerModule(new JavaTimeModule());
         return mapper;
     }
-    @Bean
-    public CacheManager cacheManager() {
-        return new ConcurrentMapCacheManager();
-    }
 }

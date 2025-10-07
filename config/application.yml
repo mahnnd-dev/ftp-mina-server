@@ -1,5 +1,3 @@
-server:
-  port: 8889
 spring:
   application:
     name: FTP Mina Server
@@ -11,8 +9,6 @@ spring:
     password: payment123
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
-    hibernate:
-      ddl-auto: validate
     open-in-view: false
     show-sql: false
     properties:
@@ -23,12 +19,13 @@ spring:
 # FTP Server Configuration
 ftp:
   server:
-    port: 2121
+    ftp-port: 2121
+    ftps-port: 990
     passive-ports: 30000-30100
     passive-external-address: # Leave empty for auto-detection
   ssl:
     keystore:
-      path: /opt/certs/ftpserver.jks
+      path: keystore/ftpserver.jks
       password: changeit
 # Logging
 logging:

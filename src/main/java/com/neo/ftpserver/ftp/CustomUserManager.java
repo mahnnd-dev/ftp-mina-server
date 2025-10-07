@@ -1,13 +1,14 @@
 package com.neo.ftpserver.ftp;
 
 
-import com.neo.ftpserver.entity.AccountFtp;
+import com.neo.ftpserver.cache.AccountFtpCache;
+import com.neo.ftpserver.dto.AccountFtp;
 import com.neo.ftpserver.permission.IpRestrictionPermission;
-import com.neo.ftpserver.repository.AccountFtpRepository;
 import com.neo.ftpserver.util.EnCodeUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ftpserver.ftplet.*;
+import org.apache.ftpserver.impl.FtpIoSession;
 import org.apache.ftpserver.usermanager.UsernamePasswordAuthentication;
 import org.apache.ftpserver.usermanager.impl.BaseUser;
 import org.apache.ftpserver.usermanager.impl.ConcurrentLoginPermission;
@@ -15,6 +16,9 @@ import org.apache.ftpserver.usermanager.impl.TransferRatePermission;
 import org.apache.ftpserver.usermanager.impl.WritePermission;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,45 +27,36 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomUserManager implements UserManager {
 
-    private final AccountFtpRepository accountFtpRepository;
+    private final AccountFtpCache accountFtpCache;
 
-
+    // --- User retrieval ---
     @Override
     public User getUserByName(String username) throws FtpException {
-        return accountFtpRepository.findByAccount(username)
-                .map(this::convertToFtpUser)
-                .orElse(null);
+        AccountFtp user = accountFtpCache.getObject(username);
+        return user != null ? convertToFtpUser(user) : null;
     }
 
     @Override
     public String[] getAllUserNames() throws FtpException {
-        List<AccountFtp> users = accountFtpRepository.findAll();
-        return users.stream()
-                .map(AccountFtp::getAccount)
-                .toArray(String[]::new);
-    }
-
-    @Override
-    public void delete(String username) throws FtpException {
-        accountFtpRepository.findByAccount(username)
-                .ifPresent(accountFtpRepository::delete);
-    }
-
-    @Override
-    public void save(User user) throws FtpException {
-        AccountFtp ftpUser = accountFtpRepository.findByAccount(user.getName())
-                .orElse(new AccountFtp());
-
-        ftpUser.setAccount(user.getName());
-        ftpUser.setPassword(EnCodeUtils.getEncodeSHA256(user.getPassword()));
-        ftpUser.setFolderAccess(user.getHomeDirectory());
-        ftpUser.setStatus(user.getEnabled() ? 1 : 0);
-        accountFtpRepository.save(ftpUser);
+        // Lấy tất cả key trong cache
+        return accountFtpCache.getCache().keySet()
+                .toArray(new String[0]);
     }
 
     @Override
     public boolean doesExist(String username) throws FtpException {
-        return accountFtpRepository.existsByAccount(username);
+        return accountFtpCache.containsKey(username);
+    }
+
+    // --- Save / Delete ---
+    @Override
+    public void save(User user) throws FtpException {
+        log.debug("save() called for {}, but ignored (read-only cache mode)", user.getName());
+    }
+
+    @Override
+    public void delete(String username) throws FtpException {
+        log.debug("delete() called for {}, but ignored (read-only cache mode)", username);
     }
 
     @Override
@@ -69,13 +64,16 @@ public class CustomUserManager implements UserManager {
         if (authentication instanceof UsernamePasswordAuthentication upAuth) {
             String username = upAuth.getUsername();
             String password = upAuth.getPassword();
-            AccountFtp user = accountFtpRepository.findByAccount(username).orElse(null);
+            AccountFtp user = accountFtpCache.getObject(username);
             if (user == null) throw new AuthenticationFailedException("User not found");
             String passwordEnCode = EnCodeUtils.getEncodeSHA256(password);
+            // 🔹 KIỂM TRA LOẠI KẾT NỐI (lấy từ FtpSession)
             if (passwordEnCode.equals(user.getPassword()) && user.getStatus() == 1) {
+                log.info("FTP login successful for user {}", username);
                 return convertToFtpUser(user);
             }
         }
+        log.warn("FTP login failed");
         throw new AuthenticationFailedException("Authentication failed");
     }
 
@@ -89,30 +87,37 @@ public class CustomUserManager implements UserManager {
         return "admin".equals(username);
     }
 
-    private User convertToFtpUser(AccountFtp ftpUser) {
+    // --- Convert AccountFtp → BaseUser ---
+    private User convertToFtpUser(AccountFtp accountFtp) {
         BaseUser user = new BaseUser();
-        user.setName(ftpUser.getAccount());
-        user.setPassword(ftpUser.getPassword());
-        user.setHomeDirectory(ftpUser.getFolderAccess() != null ? ftpUser.getFolderAccess() : "/ftp/" + ftpUser.getAccount());
-        user.setEnabled(ftpUser.getStatus() == 1);
-
+        user.setName(accountFtp.getAccount());
+        user.setPassword(accountFtp.getPassword());
+        String homeDir = accountFtp.getFolderAccess() != null ? accountFtp.getFolderAccess() : "/ftp/" + accountFtp.getAccount();
+        createFolder(homeDir);
+        user.setHomeDirectory(homeDir);
+        user.setEnabled(accountFtp.getStatus() == 1);
         List<Authority> authorities = new ArrayList<>();
-//        Cho phép: upload file, tạo thư mục, rename file/folder, xóa file/folder.
-//        Không có quyền này → chỉ được phép read-only (download, list file).
-//        Giới hạn session
+        // Giới hạn session
         authorities.add(new ConcurrentLoginPermission(99, 99));
-        if (ftpUser.getRoleAccess() != null && ftpUser.getRoleAccess().contains("WRITE")) {
+        // Write permission
+        if (accountFtp.getRoleAccess() != null && accountFtp.getRoleAccess().contains("WRITE")) {
             authorities.add(new WritePermission());
         }
-
-        authorities.add(new TransferRatePermission(0, // downloadRate (KB/s)
-                ftpUser.getMaxLength().intValue() * 1024 // uploadRate (KB/s)
-        ));
-
-        if (ftpUser.getIpList() != null && !ftpUser.getIpList().isBlank()) {
-            authorities.add(new IpRestrictionPermission(ftpUser.getIpList()));
+        // Transfer rate
+        authorities.add(new TransferRatePermission(99, 99));
+        // IP restriction
+        if (accountFtp.getIpList() != null && !accountFtp.getIpList().isBlank()) {
+            authorities.add(new IpRestrictionPermission(accountFtp.getIpList()));
         }
         user.setAuthorities(authorities);
         return user;
+    }
+
+    public void createFolder(String path) {
+        try {
+            Files.createDirectories(Path.of(path));
+        } catch (IOException e) {
+            throw new RuntimeException("Không thể tạo thư mục: " + path, e);
+        }
     }
 }
