@@ -17,7 +17,7 @@ public class AccountFtp {
     private String folderAccess;
     private String roleAccess;
     private String ipList;
-    private Long maxLength = 50l;
+    private Long maxLength = 50L;
     private Long groupId;
     private String folderFix;
 }

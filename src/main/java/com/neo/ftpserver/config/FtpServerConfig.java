@@ -3,6 +3,7 @@ package com.neo.ftpserver.config;
 import com.neo.ftpserver.ftp.CustomUserManager;
 import com.neo.ftpserver.permission.ConnectionTypeFtplet;
 import com.neo.ftpserver.permission.IpFilterFtplet;
+import com.neo.ftpserver.permission.PermissionControlFtplet;
 import lombok.RequiredArgsConstructor;
 import org.apache.ftpserver.DataConnectionConfigurationFactory;
 import org.apache.ftpserver.FtpServerFactory;
@@ -40,6 +41,7 @@ public class FtpServerConfig {
 
     private final IpFilterFtplet ipFilterFtplet;
     private final ConnectionTypeFtplet connectionTypeFtplet;
+    private final PermissionControlFtplet permissionControlFtplet;
 
     private final CustomUserManager userManager;
 
@@ -75,6 +77,7 @@ public class FtpServerConfig {
         Map<String, Ftplet> ftplets = new HashMap<>();
         ftplets.put("ipFilterFtplet", ipFilterFtplet);
         ftplets.put("connectionTypeFtplet", connectionTypeFtplet);
+        ftplets.put("permissionControlFtplet", permissionControlFtplet);
         serverFactory.setFtplets(ftplets);
 
         return serverFactory;

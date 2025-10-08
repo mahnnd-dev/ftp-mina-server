@@ -8,17 +8,16 @@ import com.neo.ftpserver.util.EnCodeUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ftpserver.ftplet.*;
-import org.apache.ftpserver.impl.FtpIoSession;
 import org.apache.ftpserver.usermanager.UsernamePasswordAuthentication;
 import org.apache.ftpserver.usermanager.impl.BaseUser;
 import org.apache.ftpserver.usermanager.impl.ConcurrentLoginPermission;
-import org.apache.ftpserver.usermanager.impl.TransferRatePermission;
 import org.apache.ftpserver.usermanager.impl.WritePermission;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,32 +91,52 @@ public class CustomUserManager implements UserManager {
         BaseUser user = new BaseUser();
         user.setName(accountFtp.getAccount());
         user.setPassword(accountFtp.getPassword());
-        String homeDir = accountFtp.getFolderAccess() != null ? accountFtp.getFolderAccess() : "/ftp/" + accountFtp.getAccount();
-        createFolder(homeDir);
+        String homeDir = buildHomeDirectory(accountFtp);
         user.setHomeDirectory(homeDir);
         user.setEnabled(accountFtp.getStatus() == 1);
         List<Authority> authorities = new ArrayList<>();
-        // Giới hạn session
-        authorities.add(new ConcurrentLoginPermission(99, 99));
-        // Write permission
-        if (accountFtp.getRoleAccess() != null && accountFtp.getRoleAccess().contains("WRITE")) {
-            authorities.add(new WritePermission());
-        }
-        // Transfer rate
-        authorities.add(new TransferRatePermission(99, 99));
         // IP restriction
         if (accountFtp.getIpList() != null && !accountFtp.getIpList().isBlank()) {
             authorities.add(new IpRestrictionPermission(accountFtp.getIpList()));
         }
+        authorities.add(new WritePermission());
+        authorities.add(new ConcurrentLoginPermission(99, 99));
         user.setAuthorities(authorities);
         return user;
     }
 
-    public void createFolder(String path) {
+    private void createFolder(Path path) {
         try {
-            Files.createDirectories(Path.of(path));
+            if (!Files.exists(path)) {
+                Files.createDirectories(path);
+                log.info("Created directory: {}", path);
+            }
         } catch (IOException e) {
-            throw new RuntimeException("Không thể tạo thư mục: " + path, e);
+            log.error("Failed to create directory: {}", path, e);
+            throw new RuntimeException("Failed to create home directory", e);
         }
+    }
+
+    public String buildHomeDirectory(AccountFtp accountFtp) {
+        String folderAccess = accountFtp.getFolderAccess();
+        String folderFix = accountFtp.getFolderFix();
+        String account = accountFtp.getAccount();
+
+        // Dùng Paths.get() để tự động xử lý separator
+        Path homePath = Paths.get("ftp");
+
+        if (folderAccess != null && !folderAccess.trim().isEmpty()) {
+            homePath = homePath.resolve(folderAccess.trim());
+        }
+        if (folderFix != null && !folderFix.trim().isEmpty()) {
+            homePath = homePath.resolve(folderFix.trim());
+        }
+        homePath = homePath.resolve(account);
+        // Normalize và convert về absolute path
+        Path normalizedPath = homePath.normalize().toAbsolutePath();
+
+        createFolder(normalizedPath);
+
+        return normalizedPath.toString();
     }
 }
