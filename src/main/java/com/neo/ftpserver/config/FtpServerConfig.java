@@ -1,10 +1,10 @@
 package com.neo.ftpserver.config;
 
 import com.neo.ftpserver.ftp.CustomUserManager;
-import com.neo.ftpserver.permission.ConnectionTypeFtplet;
-import com.neo.ftpserver.permission.IpFilterFtplet;
-import com.neo.ftpserver.permission.PermissionControlFtplet;
+import com.neo.ftpserver.permission.AuditLogFtplet;
+import com.neo.ftpserver.permission.UnifiedFtplet;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ftpserver.DataConnectionConfigurationFactory;
 import org.apache.ftpserver.FtpServerFactory;
 import org.apache.ftpserver.ftplet.Ftplet;
@@ -15,9 +15,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.File;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
+@Slf4j
 @Configuration
 @RequiredArgsConstructor
 public class FtpServerConfig {
@@ -39,10 +40,8 @@ public class FtpServerConfig {
     @Value("${ftp.ssl.keystore.password}")
     private String keystorePassword;
 
-    private final IpFilterFtplet ipFilterFtplet;
-    private final ConnectionTypeFtplet connectionTypeFtplet;
-    private final PermissionControlFtplet permissionControlFtplet;
-
+    private final AuditLogFtplet auditLogFtplet;
+    private final UnifiedFtplet unifiedFtplet;
     private final CustomUserManager userManager;
 
 
@@ -74,11 +73,10 @@ public class FtpServerConfig {
 //        listenerFactory.setDataConnectionConfiguration(dataConnFactory.createDataConnectionConfiguration());
 //        serverFactory.addListener("default", listenerFactory.createListener());
         // Permission ip
-        Map<String, Ftplet> ftplets = new HashMap<>();
-        ftplets.put("ipFilterFtplet", ipFilterFtplet);
-        ftplets.put("connectionTypeFtplet", connectionTypeFtplet);
-        ftplets.put("permissionControlFtplet", permissionControlFtplet);
-        serverFactory.setFtplets(ftplets);
+        Map<String, Ftplet> map = new LinkedHashMap<>();
+        map.put("auditLogFtplet", auditLogFtplet); // Đặt đầu tiên
+        map.put("unifiedFtplet", unifiedFtplet);
+        serverFactory.setFtplets(map);
 
         return serverFactory;
     }

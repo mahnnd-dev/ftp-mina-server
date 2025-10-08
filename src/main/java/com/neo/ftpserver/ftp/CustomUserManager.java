@@ -2,8 +2,7 @@ package com.neo.ftpserver.ftp;
 
 
 import com.neo.ftpserver.cache.AccountFtpCache;
-import com.neo.ftpserver.dto.AccountFtp;
-import com.neo.ftpserver.permission.IpRestrictionPermission;
+import com.neo.ftpserver.dto.AccountFtpDto;
 import com.neo.ftpserver.util.EnCodeUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +30,7 @@ public class CustomUserManager implements UserManager {
     // --- User retrieval ---
     @Override
     public User getUserByName(String username) throws FtpException {
-        AccountFtp user = accountFtpCache.getObject(username);
+        AccountFtpDto user = accountFtpCache.getObject(username);
         return user != null ? convertToFtpUser(user) : null;
     }
 
@@ -63,7 +62,7 @@ public class CustomUserManager implements UserManager {
         if (authentication instanceof UsernamePasswordAuthentication upAuth) {
             String username = upAuth.getUsername();
             String password = upAuth.getPassword();
-            AccountFtp user = accountFtpCache.getObject(username);
+            AccountFtpDto user = accountFtpCache.getObject(username);
             if (user == null) throw new AuthenticationFailedException("User not found");
             String passwordEnCode = EnCodeUtils.getEncodeSHA256(password);
             // 🔹 KIỂM TRA LOẠI KẾT NỐI (lấy từ FtpSession)
@@ -87,20 +86,17 @@ public class CustomUserManager implements UserManager {
     }
 
     // --- Convert AccountFtp → BaseUser ---
-    private User convertToFtpUser(AccountFtp accountFtp) {
+    private User convertToFtpUser(AccountFtpDto accountFtpDto) {
         BaseUser user = new BaseUser();
-        user.setName(accountFtp.getAccount());
-        user.setPassword(accountFtp.getPassword());
-        String homeDir = buildHomeDirectory(accountFtp);
+        user.setName(accountFtpDto.getAccount());
+        user.setPassword(accountFtpDto.getPassword());
+        String homeDir = buildHomeDirectory(accountFtpDto);
         user.setHomeDirectory(homeDir);
-        user.setEnabled(accountFtp.getStatus() == 1);
+        user.setEnabled(accountFtpDto.getStatus() == 1);
         List<Authority> authorities = new ArrayList<>();
         // IP restriction
-        if (accountFtp.getIpList() != null && !accountFtp.getIpList().isBlank()) {
-            authorities.add(new IpRestrictionPermission(accountFtp.getIpList()));
-        }
         authorities.add(new WritePermission());
-        authorities.add(new ConcurrentLoginPermission(99, 99));
+        authorities.add(new ConcurrentLoginPermission(0, 0));
         user.setAuthorities(authorities);
         return user;
     }
@@ -117,10 +113,10 @@ public class CustomUserManager implements UserManager {
         }
     }
 
-    public String buildHomeDirectory(AccountFtp accountFtp) {
-        String folderAccess = accountFtp.getFolderAccess();
-        String folderFix = accountFtp.getFolderFix();
-        String account = accountFtp.getAccount();
+    public String buildHomeDirectory(AccountFtpDto accountFtpDto) {
+        String folderAccess = accountFtpDto.getFolderAccess();
+        String folderFix = accountFtpDto.getFolderFix();
+        String account = accountFtpDto.getAccount();
 
         // Dùng Paths.get() để tự động xử lý separator
         Path homePath = Paths.get("ftp");

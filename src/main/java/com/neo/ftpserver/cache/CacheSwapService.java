@@ -34,7 +34,7 @@ public abstract class CacheSwapService<T> implements CacheService<T> {
         ConcurrentHashMap<String, T> currentStaging = stagingCache.get();
         try {
             Instant startTime = Instant.now();
-            log.info(">> Start cache update for {}", this.getClass().getSimpleName());
+            log.debug(">> Start cache update for {}", this.getClass().getSimpleName());
             // Fetch new data
             ConcurrentHashMap<String, T> newData = fetchDataFromDB();
             // Validate before update
@@ -52,7 +52,7 @@ public abstract class CacheSwapService<T> implements CacheService<T> {
             stagingCache.set(previousActive);
             // Log with accurate sizes (captured before potential race conditions)
             long duration = Duration.between(startTime, Instant.now()).toMillis();
-            log.info(">> Cache swapped successfully for {}: {} → {} items, time: {}ms", this.getClass().getSimpleName(), previousActive.size(), newStagingSize, duration);
+            log.debug(">> Cache swapped successfully for {}: {} → {} items, time: {}ms", this.getClass().getSimpleName(), previousActive.size(), newStagingSize, duration);
         } catch (Exception e) {
             // Capture size before logging to avoid potential race
             int currentSize = activeCache.get().size();
@@ -72,7 +72,7 @@ public abstract class CacheSwapService<T> implements CacheService<T> {
     // Method để force refresh cache
     @PostConstruct
     public void forceRefresh() {
-        log.info(">> Force refresh cache for {}", this.getClass().getSimpleName());
+        log.debug(">> Force refresh cache for {}", this.getClass().getSimpleName());
         cacheDataSync();
     }
 }

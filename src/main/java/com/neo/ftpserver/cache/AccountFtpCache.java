@@ -1,6 +1,6 @@
 package com.neo.ftpserver.cache;
 
-import com.neo.ftpserver.dto.AccountFtp;
+import com.neo.ftpserver.dto.AccountFtpDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,14 +12,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 @RequiredArgsConstructor
-public class AccountFtpCache extends CacheSwapService<AccountFtp> {
+public class AccountFtpCache extends CacheSwapService<AccountFtpDto> {
     private final JdbcTemplate jdbcTemplate;
 
     @Override
-    protected ConcurrentHashMap<String, AccountFtp> fetchDataFromDB() {
-        ConcurrentHashMap<String, AccountFtp> map = new ConcurrentHashMap<>();
-        List<AccountFtp> partnerConfigList = findAll();
-        for (AccountFtp partnerConfig : partnerConfigList) {
+    protected ConcurrentHashMap<String, AccountFtpDto> fetchDataFromDB() {
+        ConcurrentHashMap<String, AccountFtpDto> map = new ConcurrentHashMap<>();
+        List<AccountFtpDto> partnerConfigList = findAll();
+        for (AccountFtpDto partnerConfig : partnerConfigList) {
             map.put(partnerConfig.getAccount(), partnerConfig);
         }
         return map;
@@ -30,8 +30,8 @@ public class AccountFtpCache extends CacheSwapService<AccountFtp> {
         super.forceRefresh();
     }
 
-    public List<AccountFtp> findAll() {
+    public List<AccountFtpDto> findAll() {
         String sql = "SELECT * FROM ACCOUNT_FTP";
-        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(AccountFtp.class));
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(AccountFtpDto.class));
     }
 }

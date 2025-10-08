@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class AccountFtp {
+public class AccountFtpDto {
     private String account;
     private String description;
     private Integer typeConnect;
