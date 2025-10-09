@@ -124,6 +124,9 @@ public class UnifiedFtplet extends DefaultFtplet {
             log.debug("No IP restriction for user: {}", ftpUser.getAccount());
             return true;
         }
+        if (ftpUser.getIpList().contains("*")) {
+            return true;
+        }
         List<String> stringList = Arrays.stream(ftpUser.getIpList().split(",")).map(String::trim).toList();
         // Kiểm tra IP trong whitelist
         boolean allowed = stringList.contains(clientIp);
@@ -150,49 +153,6 @@ public class UnifiedFtplet extends DefaultFtplet {
         // Type 1 = chỉ cho phép FTP (không secure)
         // Type 2 = chỉ cho phép FTPS (secure)
         return (requiredType == 1 && !isSecure) || (requiredType == 2 && isSecure);
-    }
-
-    /**
-     * So khớp IP với pattern (hỗ trợ wildcard và CIDR)
-     */
-    private boolean matchIpPattern(String clientIp, String pattern) {
-        // Exact match
-        if (clientIp.equals(pattern)) {
-            return true;
-        }
-
-        // Wildcard match (e.g., 192.168.1.*)
-        if (pattern.contains("*")) {
-            String regex = pattern.replace(".", "\\.").replace("*", ".*");
-            return clientIp.matches(regex);
-        }
-
-        // CIDR notation (e.g., 192.168.1.0/24)
-        if (pattern.contains("/")) {
-            return matchCidr(clientIp, pattern);
-        }
-
-        return false;
-    }
-
-    /**
-     * Kiểm tra IP có nằm trong CIDR range không
-     */
-    private boolean matchCidr(String clientIp, String cidr) {
-        try {
-            String[] parts = cidr.split("/");
-            String network = parts[0];
-            int prefix = Integer.parseInt(parts[1]);
-
-            long ipLong = ipToLong(clientIp);
-            long networkLong = ipToLong(network);
-            long mask = -1L << (32 - prefix);
-
-            return (ipLong & mask) == (networkLong & mask);
-        } catch (Exception e) {
-            log.error("Error matching CIDR: {}", cidr, e);
-            return false;
-        }
     }
 
     /**

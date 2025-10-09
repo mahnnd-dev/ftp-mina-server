@@ -74,8 +74,8 @@ public class FtpServerConfig {
 //        serverFactory.addListener("default", listenerFactory.createListener());
         // Permission ip
         Map<String, Ftplet> map = new LinkedHashMap<>();
-        map.put("auditLogFtplet", auditLogFtplet); // Đặt đầu tiên
         map.put("unifiedFtplet", unifiedFtplet);
+        map.put("auditLogFtplet", auditLogFtplet); // Đặt đầu tiên
         serverFactory.setFtplets(map);
 
         return serverFactory;

@@ -1,12 +1,15 @@
 package com.neo.ftpserver.permission;
 
+import com.neo.ftpserver.constans.FtpCommandGroup;
 import com.neo.ftpserver.service.FtpAuditService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ftpserver.ftplet.*;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Slf4j
 @Component
@@ -15,9 +18,6 @@ public class AuditLogFtplet extends DefaultFtplet {
 
     private final FtpAuditService auditService;
 
-    /**
-     * Lấy đường dẫn file từ request
-     */
     private String getFilePath(FtpSession session, FtpRequest request) {
         try {
             String argument = request.getArgument();
@@ -46,9 +46,6 @@ public class AuditLogFtplet extends DefaultFtplet {
         }
     }
 
-    /**
-     * Lấy IP client
-     */
     private String getClientIp(FtpSession session) {
         try {
             return session.getClientAddress().getAddress().getHostAddress();
@@ -58,9 +55,6 @@ public class AuditLogFtplet extends DefaultFtplet {
         }
     }
 
-    /**
-     * Kiểm tra kết nối có secure không
-     */
     private boolean isSecure(FtpSession session) {
         try {
             // Kiểm tra control connection có secure không
@@ -71,9 +65,6 @@ public class AuditLogFtplet extends DefaultFtplet {
         }
     }
 
-    /**
-     * Lấy username an toàn
-     */
     private String getUsername(FtpSession session) {
         try {
             User user = session.getUser();
@@ -84,7 +75,7 @@ public class AuditLogFtplet extends DefaultFtplet {
     }
 
     @Override
-    public FtpletResult onLogin(FtpSession session, FtpRequest request) throws FtpException, IOException {
+    public FtpletResult onLogin(FtpSession session, FtpRequest request) {
         try {
             String username = getUsername(session);
             String ip = getClientIp(session);
@@ -99,7 +90,7 @@ public class AuditLogFtplet extends DefaultFtplet {
     }
 
     @Override
-    public FtpletResult onDisconnect(FtpSession session) throws FtpException, IOException {
+    public FtpletResult onDisconnect(FtpSession session) {
         try {
             String username = getUsername(session);
             String ip = getClientIp(session);
@@ -114,246 +105,156 @@ public class AuditLogFtplet extends DefaultFtplet {
     }
 
     @Override
-    public FtpletResult onUploadStart(FtpSession session, FtpRequest request) throws FtpException, IOException {
+    public FtpletResult afterCommand(FtpSession session, FtpRequest request, FtpReply reply) {
+        String cmd = request.getCommand().toUpperCase();
+        String username = getUsername(session);
+        String ip = getClientIp(session);
+        boolean secure = isSecure(session);
+        log.info("#afterCommand: {} from {}", cmd, ip);
         try {
-            String username = getUsername(session);
-            String filePath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[UPLOAD_START] User={} File={} IP={}", username, filePath, ip);
-            auditService.logEvent(username, "UPLOAD_START", filePath, null, ip, secure);
+            FtpCommandGroup group = classifyCommand(cmd);
+            switch (group) {
+                case FILE -> handleFileCommand(cmd, session, request, username, ip, secure);
+                case DIRECTORY -> handleDirectoryCommand(cmd, session, request, username, ip, secure);
+                case CONNECTION -> handleConnectionCommand(cmd, username, ip, secure);
+                case SYSTEM -> handleSystemCommand(cmd, request, username, ip, secure);
+                default -> log.debug("[UNKNOWN_CMD] {} {} IP={}", username, cmd, ip);
+            }
         } catch (Exception e) {
-            log.error("Error logging upload start event", e);
+            log.error("Error in afterCommand for cmd={}", cmd, e);
         }
         return FtpletResult.DEFAULT;
     }
 
-    @Override
-    public FtpletResult onUploadEnd(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String filePath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
+    public FtpCommandGroup classifyCommand(String cmd) {
+        return switch (cmd.toUpperCase()) {
+            case "STOR", "APPE", "RETR", "DELE", "RNFR", "RNTO", "SIZE", "MDTM" -> FtpCommandGroup.FILE;
+            case "MKD", "RMD", "CWD", "PWD", "LIST", "NLST" -> FtpCommandGroup.DIRECTORY;
+//            case "USER", "PASS", "QUIT", "PORT", "PASV", "AUTH", "PBSZ", "PROT" -> FtpCommandGroup.CONNECTION;
+            case "SITE", "STAT", "FEAT", "OPTS" -> FtpCommandGroup.SYSTEM;
+            default -> FtpCommandGroup.UNKNOWN;
+        };
+    }
 
-            // Lấy kích thước file sau khi upload
-            Long size = null;
-            try {
-                FtpFile file = session.getFileSystemView().getFile(request.getArgument());
-                if (file != null && file.doesExist()) {
-                    size = file.getSize();
+    public void handleFileCommand(String cmd, FtpSession session, FtpRequest request, String username, String ip, boolean secure) {
+        String filePath = getFilePath(session, request);
+        Long size = (cmd.equals("STOR") || cmd.equals("APPE")) ? getFileSize(session, request) : null;
+        log.info("[FILE] {} {} Size={} IP={}", username, filePath, size, ip);
+        auditService.logEvent(username, cmd, filePath, size, ip, secure);
+    }
+
+    public void handleDirectoryCommand(String cmd, FtpSession session, FtpRequest request, String username, String ip, boolean secure) {
+        String dirPath = getFilePath(session, request); // dùng chung với filePath
+        log.info("[DIR] {} {} IP={}", username, dirPath, ip);
+        auditService.logEvent(username, cmd, dirPath, null, ip, secure);
+    }
+
+    public void handleConnectionCommand(String cmd, String username, String ip, boolean secure) {
+        if (!cmd.equals("QUIT")) { // QUIT đã xử lý trong onDisconnect
+            log.info("[CONNECTION] {} {} IP={} Secure={}", username, cmd, ip, secure);
+            auditService.logEvent(username, cmd, null, null, ip, secure);
+        }
+    }
+
+    public void handleSystemCommand(String cmd, FtpRequest request, String username, String ip, boolean secure) {
+        String arg = request.getArgument();
+        log.info("[SYSTEM] {} {} {} IP={}", username, cmd, arg, ip);
+        auditService.logEvent(username, cmd + "_" + arg, null, null, ip, secure);
+    }
+
+    private Long getFileSize(FtpSession session, FtpRequest request) {
+        String argument = request.getArgument();
+
+        try {
+            log.debug("=== Getting file size for argument: {} ===", argument);
+
+            // Cách 1: Lấy từ FtpFile API
+            FtpFile file = session.getFileSystemView().getFile(argument);
+            log.debug("FtpFile obtained: {}", file != null ? "yes" : "no");
+
+            if (file != null) {
+                log.debug("File exists: {}", file.doesExist());
+                log.debug("File absolute path: {}", file.getAbsolutePath());
+                log.debug("File is file: {}", file.isFile());
+                log.debug("File is readable: {}", file.isReadable());
+
+                if (file.doesExist()) {
+                    long size = file.getSize();
+                    log.debug("File size from FtpFile API: {} bytes", size);
+                    if (size > 0) {
+                        log.debug("Got size from FtpFile API: {} bytes", size);
+                        return size;
+                    }
                 }
-            } catch (Exception e) {
-                log.warn("Cannot get file size for: {}", filePath, e);
-            }
 
-            log.info("[UPLOAD_END] User={} File={} Size={} bytes IP={}", username, filePath, size, ip);
-            auditService.logEvent(username, "UPLOAD", filePath, size, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging upload end event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
+                // Cách 2: Lấy từ physical path (nếu FtpFile không có size)
+                String physicalPath = file.getAbsolutePath();
+                log.debug("Trying physical path: {}", physicalPath);
 
-    @Override
-    public FtpletResult onDownloadStart(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String filePath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
+                if (physicalPath != null) {
+                    Path path = Paths.get(physicalPath);
+                    log.debug("Physical path exists: {}", Files.exists(path));
+                    log.debug("Physical path is file: {}", Files.isRegularFile(path));
 
-            log.info("[DOWNLOAD_START] User={} File={} IP={}", username, filePath, ip);
-            auditService.logEvent(username, "DOWNLOAD_START", filePath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging download start event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onDownloadEnd(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String filePath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            // Lấy kích thước file
-            Long size = null;
-            try {
-                FtpFile file = session.getFileSystemView().getFile(request.getArgument());
-                if (file != null && file.doesExist()) {
-                    size = file.getSize();
+                    if (Files.exists(path)) {
+                        long size = Files.size(path);
+                        log.debug("Got size from physical file: {} bytes", size);
+                        return size;
+                    }
                 }
-            } catch (Exception e) {
-                log.warn("Cannot get file size for: {}", filePath, e);
             }
 
-            log.info("[DOWNLOAD_END] User={} File={} Size={} bytes IP={}", username, filePath, size, ip);
-            auditService.logEvent(username, "DOWNLOAD", filePath, size, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging download end event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
+            // Cách 3: Thử với working directory + argument
+            FtpFile workingDir = session.getFileSystemView().getWorkingDirectory();
+            String workingPath = workingDir.getAbsolutePath();
+            log.debug("Working directory: {}", workingPath);
 
-    @Override
-    public FtpletResult onDeleteStart(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String filePath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
+            String fullPath = workingPath.endsWith("/")
+                    ? workingPath + argument
+                    : workingPath + "/" + argument;
+            log.debug("Trying full path: {}", fullPath);
 
-            log.info("[DELETE_START] User={} File={} IP={}", username, filePath, ip);
-            auditService.logEvent(username, "DELETE_START", filePath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging delete start event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onDeleteEnd(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String filePath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[DELETE_END] User={} File={} IP={}", username, filePath, ip);
-            auditService.logEvent(username, "DELETE", filePath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging delete end event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onRmdirStart(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String dirPath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[RMDIR_START] User={} Dir={} IP={}", username, dirPath, ip);
-            auditService.logEvent(username, "RMDIR_START", dirPath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging rmdir start event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onRmdirEnd(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String dirPath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[RMDIR_END] User={} Dir={} IP={}", username, dirPath, ip);
-            auditService.logEvent(username, "RMDIR", dirPath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging rmdir end event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onMkdirStart(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String dirPath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[MKDIR_START] User={} Dir={} IP={}", username, dirPath, ip);
-            auditService.logEvent(username, "MKDIR_START", dirPath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging mkdir start event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onMkdirEnd(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String dirPath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[MKDIR_END] User={} Dir={} IP={}", username, dirPath, ip);
-            auditService.logEvent(username, "MKDIR", dirPath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging mkdir end event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onRenameStart(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String fromPath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[RENAME_START] User={} From={} IP={}", username, fromPath, ip);
-            auditService.logEvent(username, "RENAME_START", fromPath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging rename start event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult onRenameEnd(FtpSession session, FtpRequest request) throws FtpException, IOException {
-        try {
-            String username = getUsername(session);
-            String toPath = getFilePath(session, request);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            log.info("[RENAME_END] User={} To={} IP={}", username, toPath, ip);
-            auditService.logEvent(username, "RENAME", toPath, null, ip, secure);
-        } catch (Exception e) {
-            log.error("Error logging rename end event", e);
-        }
-        return FtpletResult.DEFAULT;
-    }
-
-    @Override
-    public FtpletResult afterCommand(FtpSession session, FtpRequest request, FtpReply reply) throws FtpException, IOException {
-        try {
-            String cmd = request.getCommand().toUpperCase();
-            String username = getUsername(session);
-            String ip = getClientIp(session);
-            boolean secure = isSecure(session);
-
-            // Log các command đặc biệt khác (nếu cần)
-            switch (cmd) {
-                case "SITE":
-                    String siteCmd = request.getArgument();
-                    log.info("[SITE_CMD] User={} Command={} IP={}", username, siteCmd, ip);
-                    auditService.logEvent(username, "SITE_" + siteCmd, null, null, ip, secure);
-                    break;
-
-                case "QUIT":
-                    // QUIT được handle bởi onDisconnect
-                    break;
-
-                default:
-                    // Có thể log thêm các command khác nếu cần
-                    break;
+            Path path = Paths.get(fullPath);
+            if (Files.exists(path)) {
+                long size = Files.size(path);
+                log.debug("Got size from full path: {} bytes", size);
+                return size;
             }
+
+            // Cách 4: Thử với delay (file có thể chưa flush hoặc đang bị modify bởi MFMT)
+            log.debug("Waiting 200ms for file to be flushed...");
+            Thread.sleep(200);
+
+            file = session.getFileSystemView().getFile(argument);
+            if (file != null && file.doesExist()) {
+                long size = file.getSize();
+                if (size > 0) {
+                    log.debug("Got size after retry: {} bytes", size);
+                    return size;
+                }
+
+                // Thử lại với physical path
+                String physicalPath = file.getAbsolutePath();
+                if (physicalPath != null) {
+                    Path retryPath = Paths.get(physicalPath);
+                    if (Files.exists(retryPath)) {
+                        size = Files.size(retryPath);
+                        log.debug("Got size from physical file after retry: {} bytes", size);
+                        return size;
+                    }
+                }
+            }
+
+            log.warn("Cannot get file size for: {} after all attempts", argument);
+            return null;
+
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            log.warn("Interrupted while getting file size", ie);
+            return null;
         } catch (Exception e) {
-            log.error("Error in afterCommand", e);
+            log.error("Error getting file size for: {}", argument, e);
+            return null;
         }
-        return FtpletResult.DEFAULT;
     }
 }

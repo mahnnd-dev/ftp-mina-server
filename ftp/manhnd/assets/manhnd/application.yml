@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: FTP Mina Server
+    version: 1.0
+    des: FTP Mina Server + Spring Boot
+  datasource:
+    url: jdbc:oracle:thin:@(description = (address_list =  (address = (protocol = tcp)(host = 10.252.10.65)(port = 1521)))(connect_data = (service_name = payment) (server = dedicated)))
+    username: payment
+    password: payment123
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        transaction.coordinator_class: jdbc
+        format_sql: true
+#        dialect: org.hibernate.dialect.OracleDialect
+# FTP Server Configuration
+ftp:
+  server:
+    ftp-port: 2121
+    ftps-port: 990
+    passive-ports: 30000-30100
+    passive-external-address: # Leave empty for auto-detection
+  ssl:
+    keystore:
+      path: keystore/ftpserver.jks
+      password: changeit
+# Logging
+logging:
+  level:
+    com.example.ftpserver: DEBUG
+    org.apache.ftpserver: INFO

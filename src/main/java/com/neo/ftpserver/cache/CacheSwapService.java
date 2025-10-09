@@ -52,7 +52,7 @@ public abstract class CacheSwapService<T> implements CacheService<T> {
             stagingCache.set(previousActive);
             // Log with accurate sizes (captured before potential race conditions)
             long duration = Duration.between(startTime, Instant.now()).toMillis();
-            log.debug(">> Cache swapped successfully for {}: {} → {} items, time: {}ms", this.getClass().getSimpleName(), previousActive.size(), newStagingSize, duration);
+            log.info(">> Cache swapped successfully for {}: {} → {} items, time: {}ms", this.getClass().getSimpleName(), previousActive.size(), newStagingSize, duration);
         } catch (Exception e) {
             // Capture size before logging to avoid potential race
             int currentSize = activeCache.get().size();

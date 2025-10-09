@@ -117,22 +117,27 @@ public class CustomUserManager implements UserManager {
         String folderAccess = accountFtpDto.getFolderAccess();
         String folderFix = accountFtpDto.getFolderFix();
         String account = accountFtpDto.getAccount();
-
-        // Dùng Paths.get() để tự động xử lý separator
-        Path homePath = Paths.get("ftp");
-
+        Path rootFolder;
+        Path homePath;
+        // Logic xây dựng home directory
         if (folderAccess != null && !folderAccess.trim().isEmpty()) {
-            homePath = homePath.resolve(folderAccess.trim());
+            // Trường hợp 1: Có folderAccess
+            homePath = Paths.get(folderAccess.trim());
+
+            // Nếu có folderFix, append vào sau folderAccess
+            if (folderFix != null && !folderFix.trim().isEmpty()) {
+                homePath = homePath.resolve(folderFix.trim());
+            }
+        } else {
+            // Trường hợp 2: Không có folderAccess → dùng folder mặc định
+            homePath = Paths.get(account);
         }
-        if (folderFix != null && !folderFix.trim().isEmpty()) {
-            homePath = homePath.resolve(folderFix.trim());
-        }
-        homePath = homePath.resolve(account);
+        rootFolder = Paths.get("ftp").resolve(homePath);
         // Normalize và convert về absolute path
-        Path normalizedPath = homePath.normalize().toAbsolutePath();
-
+        Path normalizedPath = rootFolder.normalize().toAbsolutePath();
+        // Tạo folder nếu chưa tồn tại
         createFolder(normalizedPath);
-
+        log.debug("Built home directory for account {}: {}", account, normalizedPath);
         return normalizedPath.toString();
     }
 }
