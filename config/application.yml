@@ -4,10 +4,35 @@ spring:
     version: 1.0
     des: FTP Mina Server + Spring Boot
   datasource:
-    url: jdbc:oracle:thin:@(description = (address_list =  (address = (protocol = tcp)(host = 10.252.10.65)(port = 1521)))(connect_data = (service_name = payment) (server = dedicated)))
+    jdbc-url: jdbc:oracle:thin:@(description = (address_list =  (address = (protocol = tcp)(host = 10.252.10.65)(port = 1521)))(connect_data = (service_name = payment) (server = dedicated)))
     username: payment
     password: payment123
     driver-class-name: oracle.jdbc.OracleDriver
+    minimum-idle: 1
+    maximum-pool-size: 10
+    auto-commit: true
+    connection-timeout: 600000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    validation-timeout: 600000
+    leak-detection-threshold: 100000
+    pool-name: ${spring.application.name}
+    data-source-properties: v$session.program=${spring.application.name}
+  datasource-log:
+    jdbc-url: jdbc:oracle:thin:@(description = (address_list =  (address = (protocol = tcp)(host = 10.252.10.6)(port = 1521)))(connect_data = (service_name = logdb) (server = dedicated)))
+    username: pg_log
+    password: payment123
+    driver-class-name: oracle.jdbc.OracleDriver
+    minimum-idle: 1
+    maximum-pool-size: 10
+    auto-commit: true
+    connection-timeout: 600000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    validation-timeout: 600000
+    leak-detection-threshold: 600000
+    pool-name: ${spring.application.name}
+    data-source-properties: v$session.program=${spring.application.name}
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,7 +42,6 @@ spring:
       hibernate:
         transaction.coordinator_class: jdbc
         format_sql: true
-#        dialect: org.hibernate.dialect.OracleDialect
 # FTP Server Configuration
 ftp:
   server:
@@ -31,6 +55,14 @@ ftp:
       password: changeit
 # Logging
 logging:
-  level:
-    com.example.ftpserver: DEBUG
-    org.apache.ftpserver: INFO
+  config: config/log4j2.xml
+  job:
+    sql-insert: insert into ftp_audit_log (id,username, action, file_path, file_size, client_ip, is_secure, timestamp) values (ftp_audit_log_seq.nextval,?, ?, ?, ?, ?, ?, to_timestamp(?, 'dd/mm/yyyy hh24:mi:ss'))
+    batch-size: 5000
+    max-retry: 3
+    path:
+      time-read: 10000
+      file-pattern: work-log-inbound*.log
+      wait: logs/work/wait
+      retry: logs/work/retry
+      failed: logs/work/failed

@@ -24,10 +24,10 @@ public class FtpServerService {
     @PostConstruct
     public void initFtpServer() {
         try {
-            log.info("🔧 Initializing FTP/FTPS server on port {}/{}", ftpPort,ftpsPort);
+            log.info("🔧 Initializing FTP/FTPS server on port {}/{}", ftpPort, ftpsPort);
             ftpServer = serverFactory.createServer();
             ftpServer.start();
-            log.info("✅ FTP/FTPS server started successfully on port {}/{}", ftpPort,ftpsPort);
+            log.info("✅ FTP/FTPS server started successfully on port {}/{}", ftpPort, ftpsPort);
         } catch (Exception e) {
             log.error("❌ Failed to start FTP/FTPS server", e);
         }

@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 @RequiredArgsConstructor
 public class AccountFtpCache extends CacheSwapService<AccountFtpDto> {
+
     private final JdbcTemplate jdbcTemplate;
 
     @Override

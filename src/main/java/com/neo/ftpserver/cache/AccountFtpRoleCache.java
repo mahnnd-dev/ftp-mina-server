@@ -2,6 +2,7 @@ package com.neo.ftpserver.cache;
 
 import com.neo.ftpserver.dto.AccountFtpRoleDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -13,6 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 @RequiredArgsConstructor
 public class AccountFtpRoleCache extends CacheSwapService<AccountFtpRoleDto> {
+
     private final JdbcTemplate jdbcTemplate;
 
     @Override
