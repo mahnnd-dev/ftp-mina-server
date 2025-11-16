@@ -1,0 +1,1131 @@
+2025-10-10 08:20:47.099 | com.neo.ftpserver.FtpMinaServerApplication | main | INFO | Starting FtpMinaServerApplication v1.0 using Java 17.0.16 with PID 6384 (D:\Intellij\payment\ftp-mina-server\target\classes started by admin in D:\Intellij\payment\ftp-mina-server)
+2025-10-10 08:20:47.107 | com.neo.ftpserver.FtpMinaServerApplication | main | DEBUG | Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-10 08:20:47.109 | com.neo.ftpserver.FtpMinaServerApplication | main | INFO | No active profile set, falling back to 1 default profile: "default"
+2025-10-10 08:20:52.953 | com.neo.ftpserver.cache.CacheSwapService | main | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:20:52.953 | com.neo.ftpserver.cache.CacheSwapService | main | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:20:53.009 | com.neo.ftpserver.cache.CacheSwapService | main | INFO | >> Cache swapped successfully for AccountFtpCache: 0 → 1 items, time: 54ms
+2025-10-10 08:20:53.039 | com.neo.ftpserver.cache.CacheSwapService | main | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:20:53.039 | com.neo.ftpserver.cache.CacheSwapService | main | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:20:53.059 | com.neo.ftpserver.cache.CacheSwapService | main | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 0 → 6 items, time: 19ms
+2025-10-10 08:20:53.429 | com.neo.ftpserver.ftp.FtpServerService | main | INFO | 🔧 Initializing FTP/FTPS server on port 2121/990
+2025-10-10 08:20:53.610 | com.neo.ftpserver.ftp.FtpServerService | main | INFO | ✅ FTP/FTPS server started successfully on port 2121/990
+2025-10-10 08:20:54.661 | com.neo.ftpserver.FtpMinaServerApplication | main | INFO | Started FtpMinaServerApplication in 8.752 seconds (process running for 11.454)
+2025-10-10 08:20:54.681 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:20:54.683 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:20:54.728 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 43ms
+2025-10-10 08:20:54.730 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:20:54.731 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:20:54.766 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 35ms
+2025-10-10 08:21:04.733 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:21:04.734 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:21:04.757 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 22ms
+2025-10-10 08:21:04.768 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:21:04.768 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:21:04.785 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 16ms
+2025-10-10 08:21:14.759 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:21:14.760 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:21:14.790 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 30ms
+2025-10-10 08:21:14.792 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:21:14.793 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:21:14.814 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 21ms
+2025-10-10 08:21:16.371 | com.neo.ftpserver.permission.UnifiedFtplet | pool-4-thread-1 | DEBUG | Processing command: USER from IP: 127.0.0.1
+2025-10-10 08:21:16.372 | com.neo.ftpserver.permission.UnifiedFtplet | pool-4-thread-1 | INFO | User login attempt: manhnd from IP: 127.0.0.1
+2025-10-10 08:21:16.372 | com.neo.ftpserver.permission.UnifiedFtplet | pool-4-thread-1 | INFO | IP 127.0.0.1 is allowed for user: manhnd
+2025-10-10 08:21:16.375 | com.neo.ftpserver.ftp.CustomUserManager | pool-4-thread-1 | DEBUG | Built home directory for account manhnd: D:\Intellij\payment\ftp-mina-server\ftp\manhnd\assets
+2025-10-10 08:21:16.380 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-1 | INFO | #afterCommand: USER from 127.0.0.1
+2025-10-10 08:21:16.382 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-1 | DEBUG | [UNKNOWN_CMD] anonymous USER IP=127.0.0.1
+2025-10-10 08:21:18.440 | com.neo.ftpserver.permission.UnifiedFtplet | pool-4-thread-2 | DEBUG | Processing command: PASS from IP: 127.0.0.1
+2025-10-10 08:21:18.445 | com.neo.ftpserver.util.EnCodeUtils | pool-4-thread-2 | DEBUG | input: 123456
+2025-10-10 08:21:18.446 | com.neo.ftpserver.util.EnCodeUtils | pool-4-thread-2 | DEBUG | ShaEncoder: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+2025-10-10 08:21:18.446 | com.neo.ftpserver.ftp.CustomUserManager | pool-4-thread-2 | INFO | FTP login successful for user manhnd
+2025-10-10 08:21:18.447 | com.neo.ftpserver.ftp.CustomUserManager | pool-4-thread-2 | DEBUG | Built home directory for account manhnd: D:\Intellij\payment\ftp-mina-server\ftp\manhnd\assets
+2025-10-10 08:21:18.451 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-2 | INFO | #afterCommand: PASS from 127.0.0.1
+2025-10-10 08:21:18.452 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-2 | DEBUG | [UNKNOWN_CMD] manhnd PASS IP=127.0.0.1
+2025-10-10 08:21:20.411 | com.neo.ftpserver.permission.UnifiedFtplet | pool-4-thread-1 | DEBUG | Processing command: QUIT from IP: 127.0.0.1
+2025-10-10 08:21:20.412 | com.neo.ftpserver.permission.UnifiedFtplet | pool-4-thread-1 | INFO | Connection validation - User: manhnd, IsSecure: false, RequiredType: 3
+2025-10-10 08:21:20.418 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-1 | INFO | #afterCommand: QUIT from 127.0.0.1
+2025-10-10 08:21:20.418 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-1 | DEBUG | [UNKNOWN_CMD] manhnd QUIT IP=127.0.0.1
+2025-10-10 08:21:20.421 | com.neo.ftpserver.permission.AuditLogFtplet | pool-4-thread-1 | INFO | [LOGOUT] User=manhnd IP=127.0.0.1
+2025-10-10 08:21:24.794 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:21:24.795 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:21:24.829 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 33ms
+2025-10-10 08:21:24.830 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:21:24.830 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:21:24.846 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 15ms
+2025-10-10 08:21:34.830 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:21:34.830 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:21:34.857 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 26ms
+2025-10-10 08:21:34.857 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:21:34.858 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:21:34.873 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 14ms
+2025-10-10 08:21:44.867 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:21:44.868 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:21:44.887 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:21:44.888 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:21:44.888 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:21:44.898 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:21:54.888 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:21:54.889 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:21:54.914 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 25ms
+2025-10-10 08:21:54.915 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:21:54.915 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:21:54.926 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:22:04.917 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:22:04.918 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:22:04.944 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 25ms
+2025-10-10 08:22:04.944 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:22:04.945 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:22:04.957 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:22:05.020 | com.neo.ftpserver.logger.LogFtp | scheduling-1 | INFO | #paramsArray: [manhnd, LOGOUT, null, null, 127.0.0.1, false, 10/10/2025 08:21:20]
+2025-10-10 08:22:05.125 | com.neo.ftpserver.logger.AbstractJobProcessLog | scheduling-1 | INFO | Commit successful num: 1 rows; execute time: 103 milliseconds
+2025-10-10 08:22:05.152 | com.neo.ftpserver.logger.AbstractJobProcessLog | scheduling-1 | INFO | >>>>>>>>>>>>>>>> delete file: D:\Intellij\payment\ftp-mina-server\logs\work\wait\work-log-inbound.1.2025-10-10-082100.log status: true
+2025-10-10 08:22:14.945 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:22:14.945 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:22:14.971 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 25ms
+2025-10-10 08:22:14.971 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:22:14.972 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:22:14.992 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 21ms
+2025-10-10 08:22:24.972 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:22:24.972 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:22:24.990 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:22:24.994 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:22:24.994 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:22:25.004 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:22:34.991 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:22:34.991 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:22:35.005 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:22:35.005 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:22:35.006 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:22:35.014 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:22:45.006 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:22:45.007 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:22:45.035 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 27ms
+2025-10-10 08:22:45.036 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:22:45.036 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:22:45.049 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 13ms
+2025-10-10 08:22:55.046 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:22:55.046 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:22:55.060 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:22:55.061 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:22:55.061 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:22:55.074 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:23:05.070 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:23:05.070 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:23:05.089 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:23:05.090 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:23:05.090 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:23:05.098 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:23:15.090 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:23:15.091 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:23:15.111 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 20ms
+2025-10-10 08:23:15.112 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:23:15.112 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:23:15.119 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:23:25.129 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:23:25.130 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:23:25.150 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:23:25.152 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:23:25.153 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:23:25.162 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:23:35.161 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:23:35.161 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:23:35.174 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:23:35.175 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:23:35.175 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:23:35.181 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:23:45.176 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:23:45.176 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:23:45.189 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:23:45.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:23:45.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:23:45.197 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:23:55.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:23:55.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:23:55.204 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:23:55.204 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:23:55.205 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:23:55.211 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:24:05.209 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:24:05.209 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:24:05.223 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:24:05.223 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:24:05.224 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:24:05.231 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:24:15.235 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:24:15.236 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:24:15.249 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:24:15.249 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:24:15.250 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:24:15.256 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:24:25.251 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:24:25.251 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:24:25.264 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:24:25.265 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:24:25.265 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:24:25.273 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:24:35.266 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:24:35.266 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:24:35.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:24:35.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:24:35.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:24:35.288 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:24:45.283 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:24:45.283 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:24:45.302 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:24:45.303 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:24:45.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:24:45.314 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:24:55.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:24:55.305 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:24:55.319 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:24:55.319 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:24:55.320 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:24:55.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:25:05.319 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:25:05.319 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:25:05.351 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 31ms
+2025-10-10 08:25:05.352 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:25:05.352 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:25:05.365 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:25:15.354 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:25:15.354 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:25:15.369 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:25:15.369 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:25:15.369 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:25:15.378 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:25:25.370 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:25:25.370 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:25:25.382 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:25:25.383 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:25:25.383 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:25:25.393 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:25:35.384 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:25:35.384 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:25:35.395 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:25:35.396 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:25:35.396 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:25:35.402 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:25:45.400 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:25:45.401 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:25:45.413 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:25:45.413 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:25:45.413 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:25:45.418 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:25:55.420 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:25:55.420 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:25:55.431 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:25:55.431 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:25:55.432 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:25:55.438 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:26:05.433 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:26:05.433 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:26:05.449 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:26:05.449 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:26:05.450 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:26:05.456 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:26:15.451 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:26:15.451 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:26:15.464 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:26:15.465 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:26:15.465 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:26:15.475 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:26:25.467 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:26:25.467 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:26:25.484 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:26:25.485 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:26:25.485 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:26:25.501 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 15ms
+2025-10-10 08:26:35.486 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:26:35.486 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:26:35.502 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:26:35.502 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:26:35.502 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:26:35.509 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:26:45.504 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:26:45.504 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:26:45.516 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:26:45.516 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:26:45.517 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:26:45.523 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:26:55.517 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:26:55.517 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:26:55.526 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 8ms
+2025-10-10 08:26:55.526 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:26:55.526 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:26:55.531 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:27:05.530 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:27:05.530 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:27:05.546 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:27:05.547 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:27:05.547 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:27:05.552 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:27:15.558 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:27:15.558 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:27:15.574 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:27:15.574 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:27:15.574 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:27:15.582 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:27:25.575 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:27:25.575 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:27:25.600 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 25ms
+2025-10-10 08:27:25.601 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:27:25.601 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:27:25.610 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:27:35.601 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:27:35.601 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:27:35.618 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:27:35.618 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:27:35.619 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:27:35.624 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:27:45.631 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:27:45.631 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:27:45.651 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:27:45.651 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:27:45.651 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:27:45.658 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:27:55.653 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:27:55.653 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:27:55.672 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:27:55.672 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:27:55.672 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:27:55.689 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 16ms
+2025-10-10 08:28:05.679 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:28:05.679 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:28:05.693 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:28:05.694 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:28:05.694 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:28:05.706 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:28:15.694 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:28:15.694 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:28:15.711 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:28:15.712 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:28:15.712 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:28:15.723 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:28:25.714 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:28:25.714 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:28:25.741 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 27ms
+2025-10-10 08:28:25.742 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:28:25.742 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:28:25.757 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 14ms
+2025-10-10 08:28:35.743 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:28:35.743 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:28:35.769 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 25ms
+2025-10-10 08:28:35.769 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:28:35.769 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:28:35.783 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 14ms
+2025-10-10 08:28:45.771 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:28:45.771 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:28:45.782 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:28:45.785 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:28:45.785 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:28:45.794 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:28:55.784 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:28:55.784 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:28:55.800 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:28:55.800 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:28:55.800 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:28:55.806 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:29:05.802 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:29:05.802 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:29:05.815 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:29:05.815 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:29:05.815 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:29:05.821 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:29:15.816 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:29:15.816 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:29:15.830 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:29:15.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:29:15.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:29:15.836 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:29:25.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:29:25.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:29:25.844 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:29:25.845 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:29:25.845 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:29:25.850 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:29:35.852 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:29:35.852 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:29:35.874 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 21ms
+2025-10-10 08:29:35.874 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:29:35.874 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:29:35.881 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:29:45.876 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:29:45.876 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:29:45.913 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 36ms
+2025-10-10 08:29:45.913 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:29:45.913 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:29:45.923 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:29:55.915 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:29:55.915 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:29:55.933 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:29:55.934 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:29:55.934 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:29:55.942 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:30:05.942 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:30:05.942 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:30:05.973 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 31ms
+2025-10-10 08:30:05.973 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:30:05.973 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:30:05.986 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:30:15.974 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:30:15.974 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:30:15.988 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:30:15.988 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:30:15.988 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:30:16.016 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 27ms
+2025-10-10 08:30:25.991 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:30:25.991 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:30:26.005 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:30:26.018 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:30:26.018 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:30:26.026 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:30:36.006 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:30:36.006 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:30:36.017 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:30:36.028 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:30:36.028 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:30:36.035 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:30:46.018 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:30:46.018 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:30:46.034 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:30:46.036 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:30:46.036 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:30:46.043 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:30:56.035 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:30:56.035 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:30:56.048 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:30:56.048 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:30:56.048 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:30:56.056 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:31:06.048 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:31:06.048 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:31:06.166 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 117ms
+2025-10-10 08:31:06.167 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:31:06.167 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:31:06.206 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 38ms
+2025-10-10 08:31:16.174 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:31:16.174 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:31:16.195 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 20ms
+2025-10-10 08:31:16.220 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:31:16.220 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:31:16.226 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:31:26.207 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:31:26.207 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:31:26.218 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:31:26.229 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:31:26.229 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:31:26.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:31:36.220 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:31:36.220 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:31:36.232 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:31:36.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:31:36.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:31:36.245 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:31:46.234 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:31:46.234 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:31:46.242 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 8ms
+2025-10-10 08:31:46.246 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:31:46.246 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:31:46.252 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:31:56.244 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:31:56.244 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:31:56.262 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:31:56.262 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:31:56.262 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:31:56.268 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:32:06.263 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:32:06.263 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:32:06.275 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:32:06.275 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:32:06.275 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:32:06.284 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:32:16.276 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:32:16.276 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:32:16.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:32:16.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:32:16.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:32:16.303 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 16ms
+2025-10-10 08:32:26.288 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:32:26.288 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:32:26.298 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 9ms
+2025-10-10 08:32:26.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:32:26.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:32:26.310 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:32:36.303 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:32:36.303 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:32:36.318 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:32:36.319 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:32:36.319 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:32:36.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:32:46.320 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:32:46.320 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:32:46.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 7ms
+2025-10-10 08:32:46.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:32:46.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:32:46.337 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:32:56.337 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:32:56.337 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:32:56.347 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 9ms
+2025-10-10 08:32:56.348 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:32:56.348 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:32:56.354 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:33:06.349 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:33:06.349 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:33:06.361 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:33:06.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:33:06.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:33:06.366 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:33:16.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:33:16.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:33:16.372 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:33:16.372 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:33:16.372 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:33:16.378 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:33:26.380 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:33:26.380 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:33:26.397 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:33:26.397 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:33:26.397 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:33:26.402 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:33:36.399 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:33:36.399 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:33:36.417 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:33:36.417 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:33:36.417 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:33:36.428 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:33:46.419 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:33:46.419 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:33:46.430 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:33:46.430 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:33:46.430 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:33:46.435 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:33:56.430 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:33:56.430 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:33:56.806 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 375ms
+2025-10-10 08:33:56.806 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:33:56.806 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:33:57.010 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 203ms
+2025-10-10 08:34:06.807 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:34:06.807 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:34:07.766 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 958ms
+2025-10-10 08:34:07.766 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:34:07.766 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:34:08.085 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 319ms
+2025-10-10 08:34:17.768 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:34:17.768 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:34:17.783 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:34:18.087 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:34:18.087 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:34:18.092 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:34:27.784 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:34:27.784 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:34:27.802 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:34:28.094 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:34:28.094 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:34:28.101 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:34:37.804 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:34:37.804 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:34:37.815 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:34:38.102 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:34:38.102 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:34:38.108 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:34:47.816 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:34:47.816 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:34:47.829 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:34:48.110 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:34:48.110 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:34:48.117 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:34:57.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:34:57.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:34:57.842 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:34:58.120 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:34:58.120 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:34:58.126 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:35:07.843 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:35:07.843 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:35:07.860 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:35:08.128 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:35:08.128 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:35:08.134 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:35:17.865 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:35:17.865 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:35:17.883 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:35:18.143 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:35:18.143 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:35:18.151 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:35:27.884 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:35:27.884 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:35:27.905 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 20ms
+2025-10-10 08:35:28.153 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:35:28.153 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:35:28.160 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:35:37.906 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:35:37.906 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:35:37.931 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 24ms
+2025-10-10 08:35:38.164 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:35:38.164 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:35:38.171 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:35:47.933 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:35:47.933 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:35:47.948 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:35:48.172 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:35:48.172 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:35:48.179 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:35:57.949 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:35:57.949 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:35:57.960 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:35:58.180 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:35:58.180 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:35:58.189 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:36:07.962 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:36:07.962 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:36:07.973 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:36:08.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:36:08.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:36:08.204 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 14ms
+2025-10-10 08:36:17.975 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:36:17.975 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:36:18.009 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 33ms
+2025-10-10 08:36:18.206 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:36:18.206 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:36:18.219 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:36:28.016 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:36:28.016 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:36:28.027 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:36:28.235 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:36:28.235 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:36:28.245 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:36:38.029 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:36:38.029 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:36:38.054 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 24ms
+2025-10-10 08:36:38.247 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:36:38.247 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:36:38.255 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:36:48.055 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:36:48.055 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:36:48.068 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:36:48.257 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:36:48.257 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:36:48.262 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:36:58.068 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:36:58.068 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:36:58.080 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:36:58.264 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:36:58.264 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:36:58.270 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:37:08.081 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:37:08.081 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:37:08.093 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:37:08.271 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:37:08.271 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:37:08.280 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:37:18.094 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:37:18.094 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:37:18.110 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:37:18.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:37:18.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:37:18.293 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:37:28.112 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:37:28.112 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:37:28.154 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 41ms
+2025-10-10 08:37:28.300 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:37:28.300 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:37:28.311 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:37:38.163 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:37:38.163 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:37:38.185 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 21ms
+2025-10-10 08:37:38.318 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:37:38.318 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:37:38.326 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:37:48.198 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:37:48.198 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:37:48.221 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 22ms
+2025-10-10 08:37:48.327 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:37:48.327 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:37:48.332 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:37:58.222 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:37:58.222 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:37:58.249 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 26ms
+2025-10-10 08:37:58.335 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:37:58.335 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:37:58.345 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:38:08.250 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:38:08.250 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:38:08.285 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 35ms
+2025-10-10 08:38:08.346 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:38:08.346 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:38:08.352 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:38:18.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:38:18.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:38:18.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:38:18.354 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:38:18.354 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:38:18.361 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:38:28.306 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:38:28.306 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:38:28.323 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:38:28.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:38:28.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:38:28.477 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 114ms
+2025-10-10 08:38:38.326 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:38:38.326 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:38:38.342 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:38:38.479 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:38:38.479 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:38:38.489 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:38:48.342 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:38:48.342 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:38:48.364 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 21ms
+2025-10-10 08:38:48.490 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:38:48.490 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:38:48.505 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 14ms
+2025-10-10 08:38:58.366 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:38:58.366 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:38:58.382 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:38:58.506 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:38:58.506 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:38:58.511 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:39:08.383 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:39:08.383 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:39:08.401 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:39:08.524 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:39:08.524 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:39:08.537 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:39:18.401 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:39:18.401 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:39:18.420 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:39:18.551 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:39:18.551 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:39:18.558 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:39:28.421 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:39:28.421 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:39:28.444 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 23ms
+2025-10-10 08:39:28.559 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:39:28.559 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:39:28.580 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 21ms
+2025-10-10 08:39:38.445 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:39:38.445 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:39:38.454 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 8ms
+2025-10-10 08:39:38.586 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:39:38.586 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:39:38.612 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 26ms
+2025-10-10 08:39:48.456 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:39:48.456 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:39:48.476 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:39:48.614 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:39:48.614 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:39:48.620 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:39:58.478 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:39:58.478 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:39:58.492 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:39:58.622 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:39:58.622 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:39:58.634 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:40:08.494 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:40:08.494 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:40:08.510 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 16ms
+2025-10-10 08:40:08.635 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:40:08.635 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:40:08.641 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:40:18.511 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:40:18.511 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:40:18.573 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 62ms
+2025-10-10 08:40:18.641 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:40:18.641 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:40:18.652 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:40:28.575 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:40:28.575 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:40:28.585 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:40:28.662 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:40:28.663 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:40:28.668 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:40:38.587 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:40:38.587 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:40:38.600 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:40:38.670 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:40:38.670 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:40:38.677 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:40:48.615 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:40:48.615 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:40:48.626 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:40:48.678 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:40:48.678 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:40:48.683 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:40:58.634 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:40:58.634 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:40:58.647 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:40:58.696 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:40:58.696 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:40:58.706 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:41:08.662 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:41:08.662 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:41:08.679 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:41:08.708 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:41:08.708 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:41:08.715 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:41:18.686 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:41:18.686 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:41:18.700 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:41:18.718 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:41:18.718 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:41:18.731 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 12ms
+2025-10-10 08:41:28.702 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:41:28.702 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:41:28.760 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 57ms
+2025-10-10 08:41:28.760 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:41:28.760 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:41:28.810 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 49ms
+2025-10-10 08:41:38.761 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:41:38.761 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:41:38.811 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 50ms
+2025-10-10 08:41:38.811 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:41:38.811 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:41:38.831 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 19ms
+2025-10-10 08:41:48.812 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:41:48.812 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:41:48.840 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 27ms
+2025-10-10 08:41:48.841 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:41:48.841 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:41:48.879 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 38ms
+2025-10-10 08:41:58.841 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:41:58.841 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:41:58.889 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 48ms
+2025-10-10 08:41:58.889 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:41:58.889 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:41:58.918 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 28ms
+2025-10-10 08:42:08.891 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:42:08.891 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:42:08.913 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 22ms
+2025-10-10 08:42:08.920 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:42:08.920 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:42:08.928 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:42:18.915 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:42:18.915 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:42:18.947 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 32ms
+2025-10-10 08:42:18.947 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:42:18.947 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:42:18.967 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 20ms
+2025-10-10 08:42:28.949 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:42:28.949 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:42:28.999 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 49ms
+2025-10-10 08:42:28.999 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:42:28.999 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:42:29.021 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 21ms
+2025-10-10 08:42:39.001 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:42:39.001 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:42:39.019 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:42:39.021 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:42:39.021 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:42:39.076 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 54ms
+2025-10-10 08:42:49.020 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:42:49.020 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:42:49.043 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 22ms
+2025-10-10 08:42:49.077 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:42:49.077 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:42:49.087 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:42:59.045 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:42:59.045 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:42:59.072 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 26ms
+2025-10-10 08:42:59.088 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:42:59.088 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:42:59.102 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 13ms
+2025-10-10 08:43:09.077 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:43:09.077 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:43:09.101 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 24ms
+2025-10-10 08:43:09.108 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:43:09.108 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:43:09.117 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:43:19.110 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:43:19.110 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:43:19.125 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:43:19.125 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:43:19.125 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:43:19.132 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:43:29.126 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:43:29.126 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:43:29.138 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:43:29.138 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:43:29.138 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:43:29.144 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:43:39.149 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:43:39.149 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:43:39.163 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:43:39.163 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:43:39.164 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:43:39.168 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 4ms
+2025-10-10 08:43:49.164 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:43:49.164 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:43:49.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 26ms
+2025-10-10 08:43:49.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:43:49.190 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:43:49.200 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:43:59.191 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:43:59.191 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:43:59.204 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:43:59.204 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:43:59.204 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:43:59.217 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 13ms
+2025-10-10 08:44:09.216 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:44:09.216 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:44:09.239 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 22ms
+2025-10-10 08:44:09.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:44:09.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:44:09.252 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:44:19.250 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:44:19.252 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:44:19.263 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:44:19.263 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:44:19.263 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:44:19.269 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:44:29.265 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:44:29.265 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:44:29.275 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:44:29.275 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:44:29.275 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:44:29.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:44:39.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:44:39.286 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:44:39.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:44:39.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:44:39.304 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:44:39.315 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:44:49.316 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:44:49.316 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:44:49.328 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:44:49.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:44:49.329 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:44:49.336 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:44:59.331 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:44:59.331 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:44:59.346 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:44:59.346 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:44:59.346 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:44:59.353 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:45:09.348 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:45:09.348 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:45:09.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:45:09.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:45:09.362 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:45:09.371 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:45:19.363 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:45:19.363 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:45:19.383 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:45:19.383 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:45:19.384 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:45:19.392 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:45:29.384 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:45:29.384 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:45:29.396 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:45:29.396 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:45:29.396 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:45:29.402 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:45:39.410 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:45:39.410 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:45:39.570 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 160ms
+2025-10-10 08:45:39.570 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:45:39.570 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:45:39.702 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 132ms
+2025-10-10 08:45:49.572 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:45:49.572 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:45:49.594 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 21ms
+2025-10-10 08:45:49.704 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:45:49.704 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:45:49.713 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:45:59.597 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:45:59.597 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:45:59.626 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 28ms
+2025-10-10 08:45:59.714 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:45:59.714 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:45:59.720 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:46:09.627 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:46:09.627 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:46:09.656 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 28ms
+2025-10-10 08:46:09.729 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:46:09.729 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:46:09.746 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 16ms
+2025-10-10 08:46:19.667 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:46:19.667 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:46:19.676 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 9ms
+2025-10-10 08:46:19.748 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:46:19.748 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:46:19.755 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:46:29.677 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:46:29.677 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:46:29.686 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 8ms
+2025-10-10 08:46:29.757 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:46:29.757 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:46:29.767 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:46:39.688 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:46:39.688 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:46:39.697 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 9ms
+2025-10-10 08:46:39.769 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:46:39.769 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:46:39.775 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:46:49.699 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:46:49.699 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:46:49.709 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 9ms
+2025-10-10 08:46:49.778 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:46:49.778 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:46:49.783 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:46:59.710 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:46:59.710 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:46:59.719 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 8ms
+2025-10-10 08:46:59.784 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:46:59.784 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:46:59.790 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:47:09.720 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:47:09.720 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:47:09.732 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:47:09.794 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:47:09.794 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:47:09.805 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:47:19.733 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:47:19.733 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:47:19.746 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:47:19.808 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:47:19.808 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:47:19.814 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:47:29.748 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:47:29.748 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:47:29.759 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 10ms
+2025-10-10 08:47:29.815 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:47:29.815 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:47:29.834 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 18ms
+2025-10-10 08:47:39.761 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:47:39.761 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:47:39.782 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 21ms
+2025-10-10 08:47:39.836 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:47:39.836 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:47:39.842 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:47:49.783 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:47:49.783 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:47:49.796 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 13ms
+2025-10-10 08:47:49.843 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:47:49.843 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:47:49.853 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:47:59.798 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:47:59.798 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:47:59.821 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 22ms
+2025-10-10 08:47:59.855 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:47:59.855 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:47:59.861 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:48:09.822 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:48:09.822 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:48:09.834 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 11ms
+2025-10-10 08:48:09.863 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:48:09.863 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:48:09.870 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:48:19.836 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:48:19.836 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:48:19.849 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:48:19.870 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:48:19.870 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:48:19.881 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:48:29.850 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:48:29.850 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:48:30.054 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 203ms
+2025-10-10 08:48:30.054 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:48:30.054 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:48:30.061 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 6ms
+2025-10-10 08:48:40.054 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:48:40.054 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:48:40.085 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 30ms
+2025-10-10 08:48:40.085 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:48:40.085 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:48:40.112 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 27ms
+2025-10-10 08:48:50.101 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:48:50.101 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:48:50.116 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:48:50.116 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:48:50.116 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:48:50.124 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:49:00.131 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:49:00.131 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:49:00.146 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:49:00.146 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:49:00.146 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:49:00.151 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 5ms
+2025-10-10 08:49:10.146 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:49:10.146 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:49:10.199 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 53ms
+2025-10-10 08:49:10.200 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:49:10.200 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:49:10.212 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 10ms
+2025-10-10 08:49:20.201 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:49:20.201 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:49:20.218 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 17ms
+2025-10-10 08:49:20.219 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:49:20.219 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:49:20.234 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 14ms
+2025-10-10 08:49:30.220 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:49:30.220 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:49:30.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:49:30.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:49:30.240 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:49:30.251 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 11ms
+2025-10-10 08:49:40.247 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:49:40.247 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:49:40.259 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 12ms
+2025-10-10 08:49:40.260 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:49:40.260 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:49:40.269 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:49:50.262 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:49:50.262 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:49:50.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:49:50.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:49:50.282 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:49:50.298 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 16ms
+2025-10-10 08:50:00.283 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:50:00.283 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:50:00.399 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 115ms
+2025-10-10 08:50:00.399 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:50:00.399 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:50:00.420 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 21ms
+2025-10-10 08:50:10.407 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:50:10.407 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:50:10.423 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:50:10.423 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:50:10.423 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:50:10.431 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:50:20.438 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:50:20.438 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:50:20.458 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 19ms
+2025-10-10 08:50:20.458 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:50:20.458 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:50:20.465 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 7ms
+2025-10-10 08:50:30.460 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:50:30.460 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:50:30.476 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 15ms
+2025-10-10 08:50:30.477 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:50:30.477 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:50:30.497 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 20ms
+2025-10-10 08:50:40.478 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:50:40.478 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:50:40.520 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 41ms
+2025-10-10 08:50:40.521 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:50:40.521 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:50:40.539 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 18ms
+2025-10-10 08:50:50.522 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:50:50.522 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:50:50.557 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 34ms
+2025-10-10 08:50:50.558 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:50:50.558 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:50:50.568 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 9ms
+2025-10-10 08:51:00.559 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:51:00.559 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:51:00.578 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 18ms
+2025-10-10 08:51:00.578 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:51:00.578 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:51:00.587 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 8ms
+2025-10-10 08:51:10.578 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:51:10.578 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:51:10.593 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 14ms
+2025-10-10 08:51:10.593 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:51:10.593 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:51:10.606 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 13ms
+2025-10-10 08:51:20.594 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpCache
+2025-10-10 08:51:20.594 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpCache
+2025-10-10 08:51:20.651 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpCache: 1 → 1 items, time: 56ms
+2025-10-10 08:51:20.651 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Force refresh cache for AccountFtpRoleCache
+2025-10-10 08:51:20.651 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | DEBUG | >> Start cache update for AccountFtpRoleCache
+2025-10-10 08:51:20.673 | com.neo.ftpserver.cache.CacheSwapService | scheduling-1 | INFO | >> Cache swapped successfully for AccountFtpRoleCache: 6 → 6 items, time: 22ms
